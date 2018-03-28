@@ -3,12 +3,12 @@
 namespace MatheusHack\SefazSP\Soap;
 
 
-abstract class RtsClient extends \SoapClient
+abstract class Client extends \SoapClient
 {
 
     public function __construct($wsdl)
     {
-        parent::__construct('' . $wsdl, [
+        parent::__construct($wsdl, [
             'exceptions' => 0,
             'trace' => 1,
             'connection_timeout' => 1800,

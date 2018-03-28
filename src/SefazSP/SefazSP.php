@@ -8,7 +8,20 @@
 
 namespace MatheusHack\SefazSP;
 
+use MatheusHack\SefazSP\Services\ServiceSefaz;
+
 class SefazSP
 {
+    private $service;
+
+    function __construct()
+    {
+        $this->service = new ServiceSefaz();
+    }
+
+    public function status()
+    {
+        return $this->service->status();
+    }
 
 }
